@@ -616,12 +616,8 @@ a.logo:hover:after, a.logo:focus:after {display:none;}
 }
 
 @media only screen and (max-width:1040px){
-	.case-grid {
-		display:block;
-	}
 	.case-grid + h2 + .case-grid {margin-top:40px;}
 	.case-grid > div {
-		width:100%;
 		height:auto;
 		max-height:400px;
 		margin-bottom:40px;
@@ -638,6 +634,12 @@ a.logo:hover:after, a.logo:focus:after {display:none;}
 		margin-left:-20px;
 		margin-right:-20px;
 		border-radius:0;
+	}
+}
+@media only screen and (max-width:768px){
+	.case-grid {display:block;}
+	.case-grid > div {
+		width:100%;
 	}
 }
 
