@@ -1,0 +1,274 @@
+/* //////////////////// Base Styles //////////////////// */
+
+.grid{
+	display: box;
+	box-orient: horizontal;
+	display: flex;  
+	flex-direction: row;
+	box-sizing: border-box;
+}
+.grid > * > *{ margin: 12px 0; }
+
+.grid.no-gutter > * > *{ margin: 0;}
+
+
+/* //////////////////// Grid: 1-2 columns Width //////////////////// */
+
+.grid.col-100 {display: flex;}
+.grid.col-100 > *{width: 100%;}	
+
+.grid.col-50-50 > *:nth-child(1){width: 50%;}
+.grid.col-50-50 > *:nth-child(2){width: 50%;}
+
+.grid.col-66-33 > *:nth-child(1){width: 66.66666%;}
+.grid.col-66-33 > *:nth-child(2){width: 33.33333%;}
+
+.grid.col-33-66 > *:nth-child(1){width: 33.33333%;}
+.grid.col-33-66 > *:nth-child(2){width: 66.66666%;}
+
+.grid.col-75-25 > *:nth-child(1){width: 75%;}
+.grid.col-75-25 > *:nth-child(2){width: 25%;}
+
+.grid.col-25-75 > *:nth-child(1){width: 25%;}
+.grid.col-25-75 > *:nth-child(2){width: 75%;}		
+
+
+/* //////////////////// Grid: 1-2 Columns Margin //////////////////// */
+
+.grid.col-50-50 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-50-50 > *:nth-child(2) > *{margin-left: 12px;}
+
+.grid.col-66-33 > *:nth-child(1) > *{margin-right: 8px;}
+.grid.col-66-33 > *:nth-child(2) > *{margin-left: 16px;}
+
+.grid.col-33-66 > *:nth-child(1) > *{margin-right: 16px;}
+.grid.col-33-66 > *:nth-child(2) > *{margin-left: 8px;}
+
+.grid.col-75-25 > *:nth-child(1) > *{margin-right: 6px;}
+.grid.col-75-25 > *:nth-child(2) > *{margin-left: 18px;}
+
+.grid.col-25-75 > *:nth-child(1) > *{margin-right: 18px;}
+.grid.col-25-75 > *:nth-child(2) > *{margin-left: 6px;}
+
+
+/* //////////////////// Grid: 3 Columns Width //////////////////// */
+
+.grid.col-33-33-33 > *:nth-child(1){width: 33.33333%;}
+.grid.col-33-33-33 > *:nth-child(2){width: 33.33333%;}
+.grid.col-33-33-33 > *:nth-child(3){width: 33.33333%;}
+
+.grid.col-50-25-25 > *:nth-child(1){width: 50%;}
+.grid.col-50-25-25 > *:nth-child(2){width: 25%;}
+.grid.col-50-25-25 > *:nth-child(3){width: 25%;}
+
+.grid.col-25-50-25 > *:nth-child(1){width: 25%;}
+.grid.col-25-50-25 > *:nth-child(2){width: 50%;}
+.grid.col-25-50-25 > *:nth-child(3){width: 25%;}
+
+.grid.col-25-25-50 > *:nth-child(1){width: 25%;}
+.grid.col-25-25-50 > *:nth-child(2){width: 25%;}
+.grid.col-25-25-50 > *:nth-child(3){width: 50%;}
+
+
+/* //////////////////// Grid: 3 Columns Margin //////////////////// */
+
+.grid.col-33-33-33 > *:nth-child(1) > *{margin-right: 16px;}
+.grid.col-33-33-33 > *:nth-child(2) > *{margin-right: 8px; margin-left: 8px; }
+.grid.col-33-33-33 > *:nth-child(3) > *{margin-left: 16px;}
+
+.grid.col-50-25-25 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-50-25-25 > *:nth-child(2) > *{margin-left: 12px; margin-right: 6px;}
+.grid.col-50-25-25 > *:nth-child(3) > *{margin-left: 18px;}
+
+.grid.col-25-50-25 > *:nth-child(1) > *{margin-right: 18px;}
+.grid.col-25-50-25 > *:nth-child(2) > *{margin-left: 6px; margin-right: 6px;}
+.grid.col-25-50-25 > *:nth-child(3) > *{margin-left: 18px;}
+
+.grid.col-25-25-50 > *:nth-child(1) > *{margin-right: 18px;}
+.grid.col-25-25-50 > *:nth-child(2) > *{margin-left: 6px; margin-right: 12px;}
+.grid.col-25-25-50 > *:nth-child(3) > *{margin-left: 12px;}
+
+
+/* //////////////////// Grid: 4 Columns Width //////////////////// */	
+
+.grid.col-25-25-25-25 > *:nth-child(1){width: 25%}
+.grid.col-25-25-25-25 > *:nth-child(2){width: 25%;}
+.grid.col-25-25-25-25 > *:nth-child(3){width: 25%;}
+.grid.col-25-25-25-25 > *:nth-child(4){width: 25%;}
+
+
+/* //////////////////// Grid: 4 Columns Margin //////////////////// */	
+
+.grid.col-25-25-25-25 > *:nth-child(1) > *{margin-right: 18px;}
+.grid.col-25-25-25-25 > *:nth-child(2) > *{margin-left: 6px; margin-right: 12px;}
+.grid.col-25-25-25-25 > *:nth-child(3) > *{margin-left: 12px; margin-right: 6px;}
+.grid.col-25-25-25-25 > *:nth-child(4) > *{margin-left: 18px;}
+
+
+/* //////////////////// Grid RWD //////////////////// */
+
+@media only screen and (max-width: 960px) {
+
+.grid{flex-wrap: wrap;}
+
+/* //////////////////// Grid 2 Columns //////////////////// */
+
+.grid.col-75-25 > *:nth-child(1) {width: 66.66666%;}
+.grid.col-75-25 > *:nth-child(2){width: 33.33333%;}
+
+.grid.col-75-25 > *:nth-child(1) > *{margin-right: 8px;}
+.grid.col-75-25 > *:nth-child(2) > *{margin-left: 16px;}
+
+.grid.col-25-75 > *:nth-child(1){width: 33.33333%;}
+.grid.col-25-75 > *:nth-child(2){width: 66.66666%;}
+
+.grid.col-25-75 > *:nth-child(1) > *{margin-right: 16px;}
+.grid.col-25-75 > *:nth-child(2) > *{margin-left: 8px;}
+
+			
+.grid.col-25-50-25 > *:nth-child(1){width: 33.33333%;}
+.grid.col-25-50-25 > *:nth-child(2){width: 33.33333%;}
+.grid.col-25-50-25 > *:nth-child(3){width: 33.33333%;}
+
+.grid.col-25-50-25 > *:nth-child(1) > *{margin-right: 16px;}
+.grid.col-25-50-25 > *:nth-child(2) > *{margin-left: 8px; margin-right: 8px;}
+.grid.col-25-50-25 > *:nth-child(3) > *{margin-left: 16px;}
+
+.grid.col-25-25-50 > *:nth-child(1){width: 33.33333%;}
+.grid.col-25-25-50 > *:nth-child(2){width: 33.33333%;}
+.grid.col-25-25-50 > *:nth-child(3){width: 33.33333%;}
+
+.grid.col-25-25-50 > *:nth-child(1) > *{margin-right: 16px;}
+.grid.col-25-25-50 > *:nth-child(2) > *{margin-left: 8px; margin-right: 8px;}
+.grid.col-25-25-50 > *:nth-child(3) > *{margin-left: 16px;}
+
+/* //////////////////// Grid 3 columns //////////////////// */
+
+.grid.col-25-25-25-25 > *:nth-child(1){width: 50%;}
+.grid.col-25-25-25-25 > *:nth-child(2){width: 50%;}
+.grid.col-25-25-25-25 > *:nth-child(3){width: 50%;}
+.grid.col-25-25-25-25 > *:nth-child(4){width: 50%;}	
+
+.grid.col-25-25-25-25 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-25-25-25-25 > *:nth-child(2) > *{margin-left: 12px; margin-right: 0;}
+.grid.col-25-25-25-25 > *:nth-child(3) > *{margin-left: 0; margin-right: 12px;}
+.grid.col-25-25-25-25 > *:nth-child(4) > *{margin-left: 12px;}	
+	
+}
+@media only screen and (max-width: 768px) {
+
+/* //////////////////// Grid 2 Columns //////////////////// */
+
+.grid.col-66-33 > *:nth-child(1){width: 50%;}
+.grid.col-66-33 > *:nth-child(2){width: 50%;}
+
+.grid.col-66-33 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-66-33 > *:nth-child(2) > *{margin-left: 12px;}
+
+.grid.col-33-66 > *:nth-child(1){width: 50%;}
+.grid.col-33-66 > *:nth-child(2){width: 50%;}
+
+.grid.col-33-66 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-33-66 > *:nth-child(2) > *{margin-left: 12px;}
+
+.grid.col-75-25 > *:nth-child(1){width: 50%;}
+.grid.col-75-25 > *:nth-child(2){width: 50%;}
+
+.grid.col-75-25 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-75-25 > *:nth-child(2) > *{margin-left: 12px;}
+
+.grid.col-25-75 > *:nth-child(1){width: 50%;}
+.grid.col-25-75 > *:nth-child(2){width: 50%;}
+
+.grid.col-25-75 > *:nth-child(1) > *{margin-right: 12px;}
+.grid.col-25-75 > *:nth-child(2) > *{margin-left: 12px;}
+
+/* //////////////////// Grid 3 Columns //////////////////// */
+
+.grid.col-50-25-25 > *:nth-child(1){width: 100%;}
+.grid.col-50-25-25 > *:nth-child(2){width: 50%;}
+.grid.col-50-25-25 > *:nth-child(3){width: 50%;}
+
+.grid.col-50-25-25 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-50-25-25 > *:nth-child(2) > *{margin-left: 0; margin-right: 12px;}
+.grid.col-50-25-25 > *:nth-child(3) > *{margin-left: 12px;}
+	
+	/* //////////////////// Grids 3 Columns //////////////////// */
+
+.grid.col-33-33-33 > *:nth-child(1),
+.grid.col-33-33-33 > *:nth-child(2),
+.grid.col-33-33-33 > *:nth-child(3){width: 100%;}
+
+.grid.col-33-33-33 > *:nth-child(1) > *,
+.grid.col-33-33-33 > *:nth-child(2) > *,
+.grid.col-33-33-33 > *:nth-child(3) > *{margin-right: 0; margin-left: 0;}
+
+.grid.col-50-25-25 > *:nth-child(1),
+.grid.col-50-25-25 > *:nth-child(2),
+.grid.col-50-25-25 > *:nth-child(3){width: 100%;}
+
+.grid.col-50-25-25 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-50-25-25 > *:nth-child(2) > *{margin-left: 0; margin-right: 0;}
+.grid.col-50-25-25 > *:nth-child(3) > *{margin-left: 0;}
+
+.grid.col-25-50-25 > *:nth-child(1),
+.grid.col-25-50-25 > *:nth-child(2),
+.grid.col-25-50-25 > *:nth-child(3){width: 100%;}
+
+.grid.col-25-50-25 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-25-50-25 > *:nth-child(2) > *{margin-left: 0; margin-right: 0;}
+.grid.col-25-50-25 > *:nth-child(3) > *{margin-left: 0;}
+
+.grid.col-25-25-50 > *:nth-child(1),
+.grid.col-25-25-50 > *:nth-child(2),
+.grid.col-25-25-50 > *:nth-child(3){width: 100%;}
+
+.grid.col-25-25-50 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-25-25-50 > *:nth-child(2) > *{margin-left: 0; margin-right: 0;}
+.grid.col-25-25-50 > *:nth-child(3) > *{margin-left: 0;}
+
+/* //////////////////// Grids 4 Columns //////////////////// */
+
+.grid.col-25-25-25-25 > *:nth-child(1),
+.grid.col-25-25-25-25 > *:nth-child(2),
+.grid.col-25-25-25-25 > *:nth-child(3),
+.grid.col-25-25-25-25 > *:nth-child(4){width: 100%;}	
+
+.grid.col-25-25-25-25 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-25-25-25-25 > *:nth-child(2) > *{margin-left: 0; margin-right: 0;}
+.grid.col-25-25-25-25 > *:nth-child(3) > *{margin-left: 0; margin-right: 0;}
+.grid.col-25-25-25-25 > *:nth-child(4) > *{margin-left: 0;}	
+
+/* //////////////////// Grids 2 Columns //////////////////// */
+
+.grid.col-50-50 > *:nth-child(1){width: 100%;}
+.grid.col-50-50 > *:nth-child(2){width: 100%;}
+
+.grid.col-50-50 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-50-50 > *:nth-child(2) > *{margin-left: 0;}
+
+.grid.col-66-33 > *:nth-child(1){width: 100%;}
+.grid.col-66-33 > *:nth-child(2){width: 100%;}
+
+.grid.col-66-33 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-66-33 > *:nth-child(2) > *{margin-left: 0;}
+
+.grid.col-33-66 > *:nth-child(1){width: 100%;}
+.grid.col-33-66 > *:nth-child(2){width: 100%; }
+
+.grid.col-33-66 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-33-66 > *:nth-child(2) > *{margin-left: 0;}
+
+.grid.col-75-25 > *:nth-child(1){width: 100%;}
+.grid.col-75-25 > *:nth-child(2){width: 100%;}
+
+.grid.col-75-25 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-75-25 > *:nth-child(2) > *{margin-left: 0;}
+
+.grid.col-25-75 > *:nth-child(1){width: 100%;}
+.grid.col-25-75 > *:nth-child(2){width: 100%;}
+
+.grid.col-25-75 > *:nth-child(1) > *{margin-right: 0;}
+.grid.col-25-75 > *:nth-child(2) > *{margin-left: 0;}
+			
+}

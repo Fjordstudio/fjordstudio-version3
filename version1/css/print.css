@@ -1,0 +1,100 @@
+body {
+	font-weight:300;
+	color:#000;
+	background:#fff;
+}
+
+a {
+	text-decoration:none;
+}
+a:after{
+	content:" (" attr(href) ") ";
+	font-weight:200;
+	text-decoration:underline dotted #000;
+}
+
+
+.menu {
+	display:none;
+}
+.screen {
+	padding:24px;
+}
+
+.container.home {
+	background-image:none;
+}
+.container.interests, .container.about, .container.tl, .container.cv {
+	color:#000;
+	background:#fff;
+}
+
+h1 {
+	border-bottom:1px solid #000;
+}
+
+.rating li:before {
+	color:#aaa;
+}
+
+.infobox {
+	border:none;
+	background:#ddd;
+}
+.infobox a, .reach a {
+	color:#000;
+}
+
+/* CV lists */
+.cv-list a {
+	text-decoration:underline dotted #000;
+}
+
+/* Signature */
+.home svg {
+	width:300px;
+	height:150px;
+	margin:-24px 0 0 -24px;
+}
+.home svg path {
+	stroke:#000;
+}
+
+.home #katrine path{
+	stroke-dashoffset:0;
+	stroke-dasharray:2000;
+}
+.home #marie path{
+	stroke-dashoffset:0;
+	stroke-dasharray:1400;
+}
+.home #burmeister path{
+	stroke-dashoffset:0;
+	stroke-dasharray:2000;
+}
+
+/* Timeline */
+.timeline:before {
+	background:#ddd;
+}
+
+.tl_star {
+	color:#000;
+	background:#ddd;
+}
+
+.tl_content {
+	background:#fff;
+}
+.tl_content h2, .tl_button {
+	background:#ddd;
+	color:#000;
+}
+.tl_content h2:before {
+	background:#ddd;
+}
+
+/* Form elements */
+input, textarea {
+	border:1px solid #000;
+}
